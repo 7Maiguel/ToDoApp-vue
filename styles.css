@@ -1,0 +1,82 @@
+:root {
+    --azul: #0070cc
+}
+
+#app {
+    width: 90%;
+    margin: 2rem auto;
+    padding: 2rem;
+}
+
+.todo-prompt {
+    width: 100%;
+    background-color: #f5f5f5;
+    margin-bottom: 1rem;
+}
+
+.todo-prompt:focus {
+    border: none;
+}
+
+.todo-list {
+    list-style: circle;
+}
+
+.todo-item {
+    color: #fff;
+    background-color: var(--azul);
+    border: 1px solid var(--azul);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.todo-item span {
+    margin-left: 6px;
+}
+
+.todo-item button {
+    padding: 10px;
+    border: none;
+    color: #fff;
+    background-color: red;
+}
+
+.add-todo-btn {
+    background-color: var(--azul);
+    color: #fff;
+    border: none;
+    font-size: 20px;   
+    padding: 1rem 1.3rem;
+    position: fixed;
+    bottom: 1.2rem;
+    right: 1.2rem;
+    border-radius: 50%;
+}
+
+.todo-span {
+    color: var(--azul);
+    animation-name: breathe;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes breathe {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}

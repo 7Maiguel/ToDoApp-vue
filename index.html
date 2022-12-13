@@ -10,9 +10,37 @@
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous"
     />
-    <title>TODO Vue App</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/vue@2.7.14/dist/vue.js"></script>
+    <script src="https://kit.fontawesome.com/a0f635de54.js" crossorigin="anonymous"></script>
+    <title>TODO App</title>
   </head>
   <body>
-    <h1>TODO APP</h1>
+    <div id="app">
+      <h1 style="color: #0070cc">{{ title }}</h1>
+
+      <input
+      class="todo-prompt"
+      type="text"
+      v-model="todoText">
+      
+      <span
+      class="todo-span"
+      v-show="todos.length == 0">Type a ToDo...</span>
+      
+      <div
+      class="todo-item"
+      v-for="(todo, index) in todos"
+      v-show="todos.length > 0">
+        <span>{{ todo }}</span>
+        <button @click="deleteTodo(index)"><i class="fa-solid fa-trash"></i></button>
+      </div>
+
+      <button class="add-todo-btn" @click="saveTodo">
+        <i class="fa-solid fa-plus"></i>
+      </button>
+    </div>
+
+    <script src="vue.js"></script>
   </body>
 </html>
