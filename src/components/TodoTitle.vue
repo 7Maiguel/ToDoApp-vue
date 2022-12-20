@@ -1,15 +1,18 @@
 <template>
-    <h1
-        v-garnish.bold.italic="{
-            font: 'helvetica',
-            color: '#006eff'
-        }">
-        {{ text }}
-    </h1>
+    <div id="header">
+        <h1
+            v-garnish:medium.bold.italic="{ font: 'helvetica', color: '#005fe6' }">
+            {{ text }}
+        </h1>
+        <router-link class="sign-out-btn btn btn-primary" to="/">
+            <i class="fa-solid fa-right-to-bracket"></i>
+        </router-link>
+    </div>
 </template>
 
 <script>
 export default {
+    name: 'TodoTitle',
     props: {
         text: {
             type: String,
@@ -18,3 +21,16 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+    #header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .sign-out-btn {
+        font-size: 20px;
+    }
+</style>

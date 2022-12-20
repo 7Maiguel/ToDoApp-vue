@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <h2
+        <h2 
             v-garnish:medium.bold.italic="{ font: 'helvetica', color: '#005fe6' }">
             Create User
         </h2>
@@ -8,15 +8,10 @@
             <label for="username">Username</label>
             <input class="form-control" id="username" type="text" placeholder="New username...">
         </div>
-        <div slot="button">
+        <div style="margin-bottom: 1rem;" slot="button">
             <button class="btn btn-primary">Create</button>
-            <router-link
-                style="margin-left: 5px;"
-                class="btn btn-primary"
-                to="/">
-                Login
-            </router-link>
         </div>
+        <router-link to="/">I have an account</router-link>
     </div>
 </template>
 

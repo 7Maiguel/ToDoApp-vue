@@ -1,13 +1,9 @@
-import LoginForm from './components/LoginForm.vue'
-import CreateUserForm from './components/CreateUserForm.vue'
+import ShowForm from './components/ShowForm.vue'
+import CreateUserForm from '@/components/CreateUserForm.vue'
+import ShowTodoApp from './components/ShowTodoApp.vue'
 
 export const routes = [
-    {
-        path: '',
-        component: LoginForm
-    },
-    {
-        path: '/register',
-        component: CreateUserForm
-    }
+    { path: '', component: ShowForm, name: 'ShowForm'},
+    { path: '/register', component: CreateUserForm, name: 'CreateUserForm' },
+    { path: '/todos', component: ShowTodoApp, name: 'ShowTodoApp' }
 ]
